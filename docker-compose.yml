@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  api:
+    build:
+      context: .
+      target: build
+    ports:
+      - "8100:8080"
+    volumes:
+      - .:/go/src/github.com/kyohei0423/stress-note-backend
+    command: ["fresh"]
